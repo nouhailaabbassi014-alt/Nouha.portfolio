@@ -1380,8 +1380,8 @@
         const contactData = {
             "personalInfo": {
                 "name": "Nouhaila Abbassi",
-                "title": "Full-Stack Developer & Digital Designer",
-                "email": "nouhailaabbassi014@gmail.com",
+                "title": "Full-Stack Developer & Media Buyer",
+                "email": "nouhailaabassi014@gmail.com",
                 "location": "Tanger, Morocco"
             },
             "socialMedia": [
@@ -1399,7 +1399,7 @@
             "professionalInfo": {
                 "availability": "Open to new opportunities",
                 "seeking": "Full-time positions, Freelance projects",
-                "specialization": "Full-Stack Development, AI Integration, UI/UX Design"
+                "specialization": "Full-Stack Development, AI Integration, Media Buying"
             }
         };
 
@@ -1408,10 +1408,6 @@
             
             const contactInfoContainer = document.getElementById('contactInfo');
             contactInfoContainer.innerHTML = `
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>${contactInfo.phone}</span>
-                </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <span>${contactInfo.email}</span>
@@ -1439,6 +1435,11 @@
             const footerName = document.querySelector('.footer-about h3');
             if (footerName) {
                 footerName.textContent = contactInfo.name;
+            }
+            
+            const subtitle = document.querySelector('.hero-content .subtitle');
+            if (subtitle) {
+                subtitle.textContent = contactInfo.title;
             }
         }
 
@@ -1619,5 +1620,3 @@
 </body>
 
 </html>
-
-
