@@ -1479,7 +1479,8 @@
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
             navToggle.innerHTML = navMenu.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
@@ -1620,3 +1621,4 @@
 </body>
 
 </html>
+
